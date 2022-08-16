@@ -1,0 +1,32 @@
+/* reset */
+* {
+	box-sizing: border-box;
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	align-items: center;
+	background-color: var(--cream);
+	display: flex;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+main {
+	display: grid;
+	gap: 2rem;
+}
+
+p {
+	color: var(--dark-grayish-blue);
+	font-family: var(--font-family-montserrat);
+	font-size: 14px;
+	font-weight: 500;
+}

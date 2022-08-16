@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+/* root */
+:root {
+  --cream: hsl(30, 38%, 92%);
+  --dark-cyan: hsl(158, 36%, 37%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --white: hsl(0, 0%, 100%);
+  --font-family-fraunces: "Fraunces", serif;
+  --font-family-montserrat: "Montserrat", sans-serif;
+}
+
+/* reset */
+* {
+  box-sizing: border-box;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  background-color: var(--cream);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+main {
+  display: grid;
+  gap: 2rem;
+}
+
+p {
+  color: var(--dark-grayish-blue);
+  font-family: var(--font-family-montserrat);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* buttons */
+.button {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  flex-direction: row;
+  color: var(--white);
+  background-color: var(--dark-cyan);
+  border: none;
+  border-radius: 0.5em;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  gap: 0.75rem;
+  padding: 1rem;
+}
+.button:hover {
+  background-color: hsl(156deg, 42%, 18%);
+}
+
+/* cards */
+.card {
+  background-color: var(--white);
+  border-radius: 0.75rem;
+  display: grid;
+  max-width: 343px;
+  overflow: hidden;
+}
+.card .card-img-desktop {
+  display: none;
+}
+@media (min-width: 50em) {
+  .card {
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
+    min-height: 450px;
+    min-width: 600px;
+  }
+  .card .card-img-desktop {
+    display: block;
+  }
+  .card .card-img-mobile {
+    display: none;
+  }
+}
+
+.card-body {
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+.card-body .description {
+  line-height: 1.6;
+}
+.card-body .preview {
+  font-size: 12px;
+  letter-spacing: 0.35em;
+}
+.card-body .price {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+}
+.card-body .price :first-child {
+  color: var(--dark-cyan);
+  font-family: var(--font-family-fraunces);
+  font-size: 2rem;
+}
+.card-body .price :last-child {
+  color: var(--dark-grayish-blue);
+  font-family: var(--font-family-montserrat);
+  font-size: 0.875rem;
+  text-decoration: line-through;
+}
+.card-body .title {
+  color: var(--very-dark-blue);
+  font-family: var(--font-family-fraunces);
+  font-size: 2em;
+  line-height: 1;
+}
+@media (min-width: 50em) {
+  .card-body {
+    padding: 2rem;
+  }
+}
+
+/* frontend-mentor */
+.attribution {
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
+/*# sourceMappingURL=style.css.map */
